@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const countries = [
+           'ALBANIA',
+           'BOLIVIA',
+           'CANADA',
+           'DENMARK',
+           'ETHIOPIA',
+           'FINLAND',
+           'GERMANY',
+           'HUNGARY',
+           'IRELAND',
+           'JAPAN',
+           'KENYA'
+    ]  
+var result = countries.map(country => [country.toUpperCase(), country.substring(0, 3), country.length])
+console.log(countries);
+console.log(result);
+
+// function createArrayOfArrays(arr){
+//    var newArr = arr.reduce((rows, key, index) => (index % 1 == 0 ? rows.push([key]) 
+//   : rows[rows.length-1].push(key)) && rows, []);
+
+//   var res;
+//   var total;
+
+//  newArr.map((country, index) => {
+//       country.map((thisCountry, index) => {
+//            res = thisCountry.substring(0, 3);
+//            total = String(thisCountry).length;
+//            country.push(res);
+//            country.push(total);
+//       })
+//   })
+
+//   return newArr;
+// }
+// const countries = [
+//     'ALBANIA',
+//     'BOLIVIA',
+//     'CANADA',
+//     'DENMARK',
+//     'ETHIOPIA',
+//     'FINLAND',
+//     'GERMANY',
+//     'HUNGARY',
+//     'IRELAND',
+//     'JAPAN',
+//     'KENYA'
+//   ]
+
+// console.log(createArrayOfArrays(countries));
+    </script>
+</body>
+</html>

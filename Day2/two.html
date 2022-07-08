@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const users = [
+	{
+		name:'Brook', 
+		scores:75,
+		skills:['HTM', 'CSS', 'JS'],
+		age:16
+	},
+	{
+		name:'Alex', 
+		scores:80,
+		skills:['HTM', 'CSS', 'JS'],
+		age:18
+	}, 
+	{
+		name:'David', 
+		scores:75,
+		skills:['HTM', 'CSS'],
+		age:22
+	}, 
+	{
+		name:'John', 
+		scores:85,
+		skills:['HTM'],
+		age:25
+	},
+	{
+		name:'Sara',
+		scores:95,
+		skills:['HTM', 'CSS', 'JS'],
+		age: 26
+	},
+	{
+		name:'Martha', 
+		scores:80,
+		skills:['HTM', 'CSS', 'JS'],
+		age:18
+	},
+	{
+		name:'Thomas',
+		scores:90,
+		skills:['HTM', 'CSS', 'JS'],
+		age:20
+	}
+	];
+//  Function  for Filtering Users Score
+      function Filter(){
+        users.filter(user => {
+            if(user.scores > 85){
+                return console.log(user)
+            }
+        });
+    }
+    Filter()
+
+// Function to addUser to Array
+
+function addUser(){
+        users.forEach(user => {
+            if(user.name !== 'Sampath'){
+                users.push({name:'sampath', scores:81, skills:['HTM', 'CSS', 'JS'], age:21});
+       
+                // users.name = "Sampath",
+                // users.scores = 81,
+                // users.skills= ['HTM', 'CSS', 'JS'],
+                // users.age = 21
+            }
+            else{
+                console.log((`user already exists`))
+            }
+        });
+        //  console.log(users);
+    }
+    addUser(users)
+
+// Function TO add userSkill to Array
+
+    // function addUserSkill(){
+    //     users.forEach(user => {
+    //         if(user.name === 'John'){
+    //             user.skills[1] = 'REACT'
+    //         }
+    //     });
+    //     //  console.log(users)
+    // }
+    // addUserSkill(users)
+
+    function addUserSkill(skill){
+        users.forEach(user => {
+            if(user.name === 'John'){
+                user.skills.push(skill)
+            }
+        });
+         console.log(users)
+    }
+    addUserSkill("React Native")
+
+// Function to Edit the user
+
+    function editUser(){
+        users.map(user => {
+            if(user.name === 'Sara'){
+                user.name = 'Sam'
+            }
+        });
+        //  console.log(users)
+    }
+    editUser(users)
+
+//     function addUser(users, name, scores, skills, age) {
+
+// users.forEach((user) => {
+//     if(user.name !== name){
+//         users.push({name: name, scores: scores, skills: scores, age: age})
+//     } else{
+//         console.log((`user already exists`))
+//     }
+// })
+// console.log(users)
+
+// }
+// const users = [
+// {
+//     name:'Brook', 
+//     scores:75,
+//     skills:['HTM', 'CSS', 'JS'],
+//     age:16
+// },
+// {
+//     name:'Alex', 
+//     scores:80,
+//     skills:['HTM', 'CSS', 'JS'],
+//     age:18
+// }, 
+// {
+//     name:'David', 
+//     scores:75,
+//     skills:['HTM', 'CSS'],
+//     age:22
+// }, 
+// {
+//     name:'John', 
+//     scores:85,
+//     skills:['HTM'],
+//     age:25
+// },
+// {
+//     name:'Sara',
+//     scores:95,
+//     skills:['HTM', 'CSS', 'JS'],
+//     age: 26
+// },
+// {
+//     name:'Martha', 
+//     scores:80,
+//     skills:['HTM', 'CSS', 'JS'],
+//     age:18
+// },
+// {
+//     name:'Thomas',
+//     scores:90,
+//     skills:['HTM', 'CSS', 'JS'],
+//     age:20
+// }
+// ];
+
+
+// console.log(addUser(users, "Sampath", 90, ['HTM', 'CSS', 'JS'], 24))
+    </script>
+</body>
+</html>
